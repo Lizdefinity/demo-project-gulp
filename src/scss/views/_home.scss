@@ -1,0 +1,20 @@
+/**********************************************************************************/
+/*
+    1.- When you are using BEM, this is the way you will use the styles, firts the block class, then the element and then modifier
+    2.- Only import files you will use in this view.
+*/
+/**********************************************************************************/
+
+@import '../components/_articles';
+@import '../components/_header';
+
+.home{
+    &__content{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        &--simple{
+            padding: 40px 0 0;
+        }
+    }
+}

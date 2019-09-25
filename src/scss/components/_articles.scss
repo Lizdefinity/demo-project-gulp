@@ -1,0 +1,94 @@
+/**********************************************************************************/
+/*
+    1.- When you are using BEM, this is the way you will use the styles, firts the block class, then the element and then modifier
+    2.- Only import files you will use in this component.
+    3.- Please always separate the properties from the values.
+        incorrect: width:200px;
+        correct: width: 200px;
+*/
+/**********************************************************************************/
+
+@import '../common/_variables';
+@import '../common/_fonts';
+@import '../common/_breakpoints';
+
+.article{
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    &__image{
+        padding: 0 40px;
+    }
+    &__title{
+        font-family: $font-family-primary;
+        margin-top: 10px;
+        // the first value is the minimum size (mobile), the second one is de maximum until 1920px (tv)
+        @include fluid-type(18px, 40px);
+    }
+    &--simple{
+        &__title{
+            font-family: $font-family-third;
+            font-weight: 300;
+            // the first value is the minimum size (mobile), the second one is de maximum until 1920px (tv)
+            @include fluid-type(18px, 40px);
+        }
+    }
+
+    //screen and (max-width: 767px) and (min-width: 0px) and (orientation: portrait)
+    //screen and (max-width: 767px) and (min-width: 0px) and (orientation: landscape)
+    //if you place false, the styles placed here will affect all the header class
+    @include mediaQuery(xs, portrait, true) {
+        &__image{
+            width: 100px;
+            padding: 0 20px;
+        }
+    }
+    //screen and (max-width: 767px) and (min-width: 0px) and (orientation: portrait)
+    //screen and (max-width: 767px) and (min-width: 0px) and (orientation: landscape)
+    //if you place false, the styles placed here will affect all the class
+    @include mediaQuery(xs, landscape, true) {
+        &__image{
+            width: 100px;
+            padding: 0 20px;
+        }
+    }
+    //screen and (max-width: 1023px) and (min-width: 768px) and (orientation: portrait)
+    //screen and (max-width: 1023px) and (min-width: 768px) and (orientation: landscape)
+    //if you place false, the styles placed here will affect all the class
+    @include mediaQuery(sm, portrait, true) {
+        &__image{
+            width: 120px;
+        }
+    }
+    @include mediaQuery(sm, landscape, true) {
+        &__image{
+            width: 120px;
+        }
+    }
+    //screen and (max-width: 1079px) and (min-width: 1024px) and (orientation: portrait)
+    //screen and (max-width: 1919px) and (min-width: 1024px) and (orientation: landscape)
+    //if you place false, the styles placed here will affect all the class
+    @include mediaQuery(md, portrait, true) {
+        &__image{
+            width: 150px;
+        }
+    }
+    @include mediaQuery(md, landscape, true) {
+        &__image{
+            width: 150px;
+        }
+    }
+    //screen and (min-width: 1920px) and (orientation: landscape)
+    //screen and (min-width: 1080px) and (orientation: portrait)
+    //if you place false, the styles placed here will affect all the class, this is affecting when is more than 1920 and more than 1080 portrait
+    @include mediaQuery(lg, portrait, false) {
+        &__image{
+            width: 300px;
+        }
+    }
+    @include mediaQuery(lg, landscape, false) {
+        &__image{
+            width: 300px;
+        }
+    }
+}

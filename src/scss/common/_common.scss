@@ -1,0 +1,56 @@
+/**********************************************************************************/
+/*
+    1.- In the common file you will place all single elements like, body, titles, paragraphs, links, buttons, etc. No components.
+    2.- Try to have this file readable, I mean, place comments, try to place styles orderable:
+        background
+        font-family
+        font-size
+        margin
+        padding
+    3.- Also for the class, need to be orderable:
+        .buttons
+        .links
+        .paragraphs
+        .titles
+    4.- Please dont place styles directly to the tags, this could cause that another person need to change styles to the h1 and the result      of this will be that are more code.
+    5.- To avoid the point 4, you can place styles like this way:
+        .title-h1
+        .title-h2
+        .primary-paragraph
+        .secondary-paragraph
+    6.- Everything will be inside the body and need to be correctly indent of 4 and with comments
+    7.- If class has similar properties, please just join it.
+*/
+/**********************************************************************************/
+
+@import './_variables';
+@import './_mixins';
+@import './_fonts';
+
+html, body{
+    font-size: 62.5%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    main, section, header, footer, nav, article{
+        display: block;
+    }
+}
+body{
+    background: rgba($color-primary-red, 0.8);
+    display: block;
+    // the first value is the font size, the second one is the line-height
+    @include fontSize(16, 20);
+    /* Titles */
+    .title-h1, .title-h2{
+        margin: 0;
+        padding: 0;
+    }
+    .title-h1{
+        color: $color-third-gray;
+        display: flex;
+    }
+    .title-h2{
+        color: $color-third-darker-gray;
+    }
+}

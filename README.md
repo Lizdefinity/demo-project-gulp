@@ -8,6 +8,7 @@ Simple front-end website that use HTML, SCSS, and JavaScript, using Gulp to comp
 * Install [Node.js](https://nodejs.org/en/) if you don't have it yet.
 * Run `npm install`
 * Run `gulp` to run the default Gulp task
+* Run `gulp prod` to run the prod Gulp task
 
 In this proejct, Gulp is configured to run the following functions:
 
@@ -16,4 +17,8 @@ In this proejct, Gulp is configured to run the following functions:
 * Concatenate the JS files
 * Uglify the JS files
 * Move CSS, JS, HTML files to the `/dist` folder
- 
+* Watch and browser sync dist folder
+* Minify images
+* Move CSS, JS, HTML files to the `/prod` folder in a zip file
+
+

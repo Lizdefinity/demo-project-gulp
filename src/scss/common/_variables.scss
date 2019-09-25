@@ -1,0 +1,44 @@
+/**********************************************************************************/
+/*
+    1.- Always place a color with hex code in capital letters
+    2.- Dont place variable names like: "sobra, red-color, border, shadow, etc" I placed names like color-primary, color-secondary, etc.        Please follow it in this way.
+    3.- Dont use rgba here in the variables, if you need to use opacity, just place it like this way:
+        background: rgba($color-primary-white, 0.1), but this will place it in the file and class need it.
+    4.- Dont repeat colors please.
+    5.- Always place the colors here, dont use color in other files, only variables colors.
+*/
+/**********************************************************************************/
+
+/**********************************************************************************/
+/* White */
+/**********************************************************************************/
+$color-primary-white: #FFFFFF;
+$color-primary-light-white: #FAFAFA;
+$color-primary-lighther-white: #FCFCFC;
+$color-primary-dark-white: #F0F0F0;
+$color-primary-darker-white: #F5F5F5;
+$color-secondary-white: #DDDDDD;
+$color-secondary-light-white: #D6D6D6;
+$color-secondary-lighther-white: #D8D8D8;
+$color-secondary-dark-white: #E5E5E5;
+$color-third-gray: #CCCCCC;
+$color-third-light-gray: #CBCBCB;
+$color-third-lighther-gray: #C8C8C8;
+$color-third-dark-gray: #BCBCBC;
+$color-third-darker-gray: #A7A7A7;
+
+/**********************************************************************************/
+/* Red */
+/**********************************************************************************/
+$color-primary-red: #FF2424;
+$color-primary-light-red: #E55757;
+
+/**********************************************************************************/
+/* Blue */
+/**********************************************************************************/
+$color-primary-blue: #00B1FF;
+
+/**********************************************************************************/
+/* Black */
+/**********************************************************************************/
+$color-primary-black: #000000;

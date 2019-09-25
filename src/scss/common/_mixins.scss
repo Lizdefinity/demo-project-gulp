@@ -1,0 +1,39 @@
+/**********************************************************************************/
+/*
+    1.- In this file you can place mixin styles that are repeated in all the project, need to be aware of that.
+        If you see you are repeating code in some files, need to implement a mixin and then reutilize it
+*/
+/**********************************************************************************/
+
+@mixin vertical-gradient($top-color, $bottom-color) {
+    background: $bottom-color;
+    background: -moz-linear-gradient(top, $top-color 0%, $bottom-color 92%);
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0%, $top-color),
+        color-stop(92%, $bottom-color)
+    );
+    background: -webkit-linear-gradient(top, $top-color 0%, $bottom-color 92%);
+    background: -o-linear-gradient(top, $top-color 0%, $bottom-color 92%);
+    background: -ms-linear-gradient(top, $top-color 0%, $bottom-color 92%);
+    background: linear-gradient(to bottom, $top-color 0%, $bottom-color 92%);
+    background-repeat: no-repeat;
+}
+@mixin horizontal-gradient($top-color, $bottom-color) {
+    background: $bottom-color;
+    background: -moz-linear-gradient(left, $top-color 0%, $bottom-color 92%);
+    background: -webkit-gradient(linear, left, right, color-stop(0%, $top-color), color-stop(92%, $bottom-color));
+    background: -webkit-linear-gradient(left, $top-color 0%, $bottom-color 92%);
+    background: -o-linear-gradient(left, $top-color 0%, $bottom-color 92%);
+    background: -ms-linear-gradient(left, $top-color 0%, $bottom-color 92%);
+    background: linear-gradient(to right, $top-color 0%, $bottom-color 92%);
+}
+@mixin vertical-align() {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

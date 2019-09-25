@@ -1,0 +1,40 @@
+/**********************************************************************************/
+/*
+    1.- If you can see Im importing the fonts in this file only and making variables to reuse it in all files.
+    2.- You need to define if you need a total responsive font sizes or maybe use rei or em. Please read more about it.
+    3.- I create a mixin of font size that you can use, please see common.scss and article to see how is implemented and also watch it in        the browser
+*/
+/**********************************************************************************/
+
+
+/**********************************************************************************/
+/* Font family and sizes */
+/**********************************************************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300,400,700&display=swap');
+
+$font-family-primary: 'Lato', sans-serif;
+$font-family-secondary: 'Helvetica';
+$font-family-third: 'Open Sans', sans-serif;
+
+
+//Rhythm adds font-size and line-height in rem with a px fallback
+//Value passed should be the expected px size
+@mixin fontSize($size, $heightValue) {
+    font-size: $size * 1px;
+    font-size: $size * 0.1rem;
+    line-height: $heightValue * 1px; //fallback for old browsers
+    line-height: $heightValue * 0.1rem;
+}
+
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-font-size, $max-font-size) {
+    font-size: calc(
+        #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - 320px) / #{strip-unit(1920 - 320px)})
+    );
+}
+

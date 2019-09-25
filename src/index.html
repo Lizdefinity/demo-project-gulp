@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/main.css">
+        <title>Proyecto</title>
+    </head>
+    <body>
+        <main class="home"><!--This is a class that will be defined in the home stylesheet because is specific for this view only -->
+            <!-- IF SPECIFIC BLOCKK OF TAGS ARE REPEATING, IS A COMPONENT, SO YOU WILL NEED TO PLACE THE STYLES IN COMPONENT FOLDER AND CREATE NEW STYLESHEETS. Always use class, no tags for styles -->
+            <header class="header">
+                <nav class="header__nav">
+                    <ul class="header__nav__list">
+                        <li class="header__nav__list__item">
+                            <a href="/" class="header__nav__list__item__link">Home</a>
+                        </li>
+                        <li class="header__nav__list__item">
+                            <a href="views/about-us.html" class="header__nav__list__item__link">About Us</a>
+                        </li>
+                        <li class="header__nav__list__item">
+                            <a href="/" class="header__nav__list__item__link">Services</a>
+                        </li>
+                        <li class="header__nav__list__item">
+                            <a href="/" class="header__nav__list__item__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- Try to use HTML5, but first ask what browser you need to cover -->
+            <!-- Try to use BEM — Block Element Modifier is a methodology that helps you to create reusable components and code sharing in front-end development, There are only two hard problems in Computer Science: cache invalidation and naming things — Phil Karlton-->
+            <!-- IF SPECIFIC BLOCKK OF TAGS ARE REPEATING, IS A COMPONENT, SO YOU WILL NEED TO PLACE THE STYLES IN COMPONENT FOLDER AND CREATE NEW STYLESHEETS.  -->
+            <section class="home__content"><!--This is a class that will be defined in the home stylesheet because is specific for this view only -->
+                <section class="article">
+                    <!-- Read more about WCAG, one of the recomendation is has ALT in all images, offer text alternatives for any content other than text so that it can be interpreted in the way other people need, such as extra large font size, braille, spoken text, sign language or simpler language.-->
+                    <img src="images/image.svg" alt="Che Guevara image" class="article__image">
+                    <!-- In this case you have a general class for title, but you can use an specific class for this block only. -->
+                    <h1 class="article__title title-h1">Che Guevara</h1>
+                </section>
+                <!-- This is same block than before but has a Modifier, in this case is article--simple, please check the stylesheet _article.scss -->
+                <section class="article article--simple">
+                    <img src="images/image.svg" alt="Che Guevara image" class="article__image">
+                    <h1 class="article__title article--simple__title title-h1">Che Guevara</h1>
+                </section>
+            </section>
+
+            <!-- This has the same tags than before but with a modifier -->
+            <section class="home__content home__content--simple">
+                <section class="article">
+                    <img src="images/image.svg" alt="Che Guevara image" class="article__image">
+                    <h1 class="article__title title-h1">Che Guevara</h1>
+                </section>
+                <section class="article article--simple">
+                    <img src="images/image.svg" alt="Che Guevara image" class="article__image">
+                    <h1 class="article__title article--simple__title title-h1">Che Guevara</h1>
+                </section>
+            </section>
+        </main>
+    </body>
+</html>
